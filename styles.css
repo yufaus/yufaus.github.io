@@ -1,0 +1,268 @@
+/* Define custom properties for colors */
+:root {
+    --primary-color: #D62839;
+    --button-color: #6f21459f;
+    --button-hover-color:  #aa356c9c;
+    --background-color: #3d3939;
+    --background-color-2: #2e2c2c;
+    --h1-color: #4488cc;
+    --h2-color: #607ad0;
+    --h3-color: #8497cc;
+    --paragraph-color: #ffffff;
+    --sidebar-background-color: #271f1f;
+}
+
+/* CSS styles for the menu bar and introduction section */
+body {
+    font-size: 18px;
+    font-family: "Bahnschrift", Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+.menu {
+    background-color: var(--primary-color);
+    color: var(--paragraph-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu button {
+    background-color: var(--button-color);
+    color: var(--paragraph-color);
+    width: 150px;
+    height: 75px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: inherit;
+    font-size: larger;
+    transition: background-color 0.15s ease;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.menu button:hover {
+    background-color: var(--button-hover-color);
+    font-size: 150%;
+    transition: all 0.3s ease;
+}
+
+.menu button:not(:hover) {
+    font-size: 120%;
+    transition: all 0.3s ease;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: var(--paragraph-color);
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add any additional styling as needed */
+  }
+
+.imageContainer {
+    width: 48%;
+    padding-top: 20%;
+    background-image: url('V16.png');
+    background-size: cover;
+    background-position: center center;
+    border: 5px solid #1b0000; /* Adjust the border properties as desired */
+}
+.videoEmbed {
+    padding: 0;
+    position: relative;
+    width: 40%;
+    padding-bottom: 22.5%; /* 16:9 aspect ratio (9 divided by 16) */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+  
+.videoEmbed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.default {
+    background-color: var(--background-color);
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: var(--primary-color);
+    
+}
+
+h1 {
+    color: var(--h1-color);
+}
+h2 {
+    color: var(--h2-color);
+}
+h3 {
+    color: var(--h3-color);
+}
+p, li {
+    color: var(--paragraph-color);
+    text-align: inherit;
+    list-style-position: inside;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .videoEmbed {
+        padding: 0;
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 divided by 16) */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .imageContainer {
+        width: 100%;
+        padding-top: 75%;
+        background-image: url('V16.png');
+        background-size: cover;
+        background-position: center center;
+        border: 0; /* Adjust the border properties as desired */
+    }
+
+    .default {
+        background-color: var(--background-color);
+        padding:20px;
+        width:auto;
+        text-align: left;
+        color: var(--primary-color);
+    }
+    .default ul {
+        padding-left: 15px;
+    }
+    .default ul ul {
+        padding-left: 20px;
+    }
+    .default li {
+        text-indent: -15px;
+    }
+    
+    .menu button {
+        display: none;
+    }
+
+    .menu .icon {
+        display: block;
+        color: var(--paragraph-color);
+        font-size: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .menu.responsive .icon {
+        margin-right: 0;
+    }
+
+    .menu.responsive ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-color);
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+    
+
+    .menu.responsive li {
+        margin: 10px 0;
+    }
+
+    .menu.responsive li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* sidebar thing */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -40px;
+        bottom: 0;
+        width: 200px;
+        background-color: var(--sidebar-background-color);
+        color: var(--paragraph-color);
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(200px);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        font-size: 20px;
+        color: var(--paragraph-color);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu.responsive .icon:focus + .sidebar {
+        transform: translateX(-200px);
+    }
+
+    /* Additional styles for the sidebar content */
+    .sidebar ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .sidebar li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar a {
+        color: var(--paragraph-color);
+        text-decoration: none;
+    }
+}
+
+/* Additional styles to hide hamburger menu on desktop */
+@media (min-width: 769px) {
+    .menu .icon {
+        display: none;
+    }
+
+    .menu ul {
+        display: flex !important;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}

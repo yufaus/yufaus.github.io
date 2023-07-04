@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Te-Jen Yu | About</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bahnschrift">
+    <style>
+        .aboutTitle {
+            background-color: var(--background-color-2);
+            padding: 20px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+    </style>
+    <script>
+        // JavaScript function to toggle responsive menu
+        function toggleMenu() {
+            console.log("toggle menu");
+            var menuList = document.getElementById("menuList");
+            menuList.classList.toggle("responsive");
+            var sidebar = document.getElementById("sidebar");
+            if (menuList.classList.contains("responsive")) {
+                sidebar.style.transform = "translateX(0)";
+            } else {
+                sidebar.style.transform = "translateX(200px)";
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu">
+        <ul id="menuList">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icon" onclick="toggleMenu();">&#9776;</div>
+
+    </div>
+
+    <!-- Sidebar Menu (Mobile) -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Introduction Section -->
+    <div class="aboutTitle">
+        <h1>About Me</h1>
+    </div>
+</body>
+</html>

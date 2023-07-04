@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Te-Jen Yu | About</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bahnschrift">
+    <style>
+        .aboutTitle {
+            background-color: var(--background-color-2);
+            padding: 20px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+    </style>
+    <script>
+        // JavaScript function to toggle responsive menu
+        function toggleMenu() {
+            console.log("toggle menu");
+            var menuList = document.getElementById("menuList");
+            menuList.classList.toggle("responsive");
+            var sidebar = document.getElementById("sidebar");
+            if (menuList.classList.contains("responsive")) {
+                sidebar.style.transform = "translateX(0)";
+            } else {
+                sidebar.style.transform = "translateX(200px)";
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu" id="menuList">
+        <a href="index.html"><button>Home</button></a>
+        <a href="about.html"><button>About</button></a>
+        <a href="blog.html"><button>Blog</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+
+        <div class="icon" onclick="toggleMenu();">&#9776;</div>
+    </div>
+
+    <!-- Sidebar Menu (Mobile) -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Introduction Section -->
+    <div class="aboutTitle">
+        <h1>About Me</h1>
+    </div>
+
+    <div class="default">
+        <h2>Degree</h2>
+        <p>
+            I am currently studying a Bachelor of Engineering (Honours)/Bachelor of Engineering Science, majoring in <b>Mechatronics and Electrical Engineering</b> at UNSW.
+            <br>I was originally studying Mechatronics/Commerce then Mechatronics/CS.
+        </p>
+    </div>
+
+    <div class = "container">
+        <div class = "imageContainer"></div>
+
+    </div>
+
+    
+    <div class = "default">
+        <h2>Interests</h2>
+        <ul>
+            <li>History
+                <ul>
+                    <li>Chinese & sphere of influence <i>(Yuan Dynasty-)</i></li>
+                    <li>Western & Eastern European <i>(800 A.D.-)</i> + Australia</li>
+                    <li>Mediterranean Regions incl. Rome & Greece + Middle East <i>(3000 B.C.-)</i></li>
+                    <li>USA <i>(1700s-)</i></li>
+                    <li>WW2 Pacific Theatre + Sino- & Soviet-Japanese War</li>
+                    <li>Engineering advancements</li>
+                </ul>
+            </li>
+
+            <li>Bicycles (Maintenance, tech, riding skill)</li>
+            <li>Trains (Going railfanning every few weeks when I'm free. Feel free to <a href="contact.html">join</a> [Contact page])</li>
+            <li>Cars</li>
+            <li>Hiking</li>
+            <li>Projects</li>
+        </ul>
+
+        <h2>Languages</h2>
+        <h3>Known</h3>
+        <ul>
+            <li>Chinese (Mandarin, Traditional Chinese script)</li>
+            <li>English (British & American)</li>
+        </ul>
+        <h3>Am learning</h3>
+        <ul>
+            <li>Russian, with western Accent, incorrect grammar & syllable stress</li>
+        </ul>
+        <h3>Forgot (allegedly, reportedly & supposedly)</h3>
+        <ul>
+            <li>German, second language (rumored)</li>
+        </ul>
+
+        <h2>KFC</h2>
+        <p>I have unironically never had KFC😎. I also got forklift certified (😎😎) before getting my Ps.<br> </p>
+    </div>
+</body>
+</html>

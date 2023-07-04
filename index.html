@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Te-Jen Yu | Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bahnschrift">
+    <style>
+        .introduction {
+            background-color: var(--background-color-2);
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: var(--primary-color);
+        }
+        .introduction p {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .videoContainer {
+            text-align: center;
+        }
+    </style>
+    <script>
+        // JavaScript function to toggle responsive menu
+        function toggleMenu() {
+            console.log("toggle menu");
+            var menuList = document.getElementById("menuList");
+            menuList.classList.toggle("responsive");
+            var sidebar = document.getElementById("sidebar");
+            if (menuList.classList.contains("responsive")) {
+                sidebar.style.transform = "translateX(0)";
+            } else {
+                sidebar.style.transform = "translateX(200px)";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu" id="menuList">
+        <a href="index.html"><button>Home</button></a>
+        <a href="about.html"><button>About</button></a>
+        <a href="blog.html"><button>Blog</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+
+        <div class="icon" onclick="toggleMenu();">&#9776;</div>
+    </div>
+
+    <!-- Sidebar Menu (Mobile) -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Introduction Section -->
+    <div class="introduction">
+        <h1>Te-Jen Yu</h1>
+        <h3>Second year B.Eng(Hons)/BEngSci student at UNSW Sydney</h3>
+        <p>Hello, I'm Te-Jen. I study a double degree of my two favorite engineering disciplines,
+            Mechatronics and Electrical!<br><br>
+            This is my personal site to showcase the things I've learnt throughout my time at UNSW through my projects and classes; 
+            as well as my interests, which includes all things transportation, bicycles and hiking.
+        </p>
+    </div>
+
+    <div class="videoContainer">
+        <h2>Latest video</h2>
+        <div class="videoEmbed">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=hh3H035JrGY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
