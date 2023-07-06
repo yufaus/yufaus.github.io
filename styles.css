@@ -132,7 +132,7 @@ p, li {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .videoEmbed {
         padding: 0;
         position: relative;
@@ -253,7 +253,7 @@ p, li {
 }
 
 /* Additional styles to hide hamburger menu on desktop */
-@media (min-width: 769px) {
+@media (min-width: 1081px) {
     .menu .icon {
         display: none;
     }
