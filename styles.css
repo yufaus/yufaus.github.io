@@ -2,15 +2,20 @@
 :root {
     --primary-color: #D62839;
     --button-color: #6f21459f;
+    --dropdown-button-color: #601c22;
     --button-hover-color:  #aa356c9c;
+    --dropdown-button-hover-color: #aa3545;
     --background-color: #3d3939;
     --background-color-2: #2e2c2c;
+    --background-section-color: #353232;
     --footer-color: #201717;
     --h1-color: #4488cc;
     --h2-color: #607ad0;
     --h3-color: #8497cc;
     --paragraph-color: #ffffff;
     --sidebar-background-color: #271f1f;
+
+    --title-color: #aa3545;
 }
 
 /* CSS styles for the menu bar and introduction section */
@@ -72,6 +77,55 @@ body {
 .menu a {
     color: var(--paragraph-color);
     text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: var(--dropdown-button-color);
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dropdown-button-color);
+    color: var(--paragraph-color);
+    min-width: 160px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: calc(100%);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: var(--paragraph-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--dropdown-button-hover-color);
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.title {
+    background-color: var(--background-color-2);
+    padding: 20px;
+    text-align: center;
+    color: var(--primary-color);
 }
 
 .footer {
@@ -158,6 +212,18 @@ ul.horizontal-list li {
     text-align: left;
     color: var(--primary-color);
     padding: 30px;
+}
+
+.sectionTitle {
+    background-color: var(--title-color);
+    padding:30px;
+    width:auto;
+    text-align: left;
+    text-align: center;
+}
+
+.sectionTitle h2 {
+    color: var(--paragraph-color);
 }
 
 h1 {

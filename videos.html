@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Te-Jen Yu | Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bahnschrift">
+    <style>
+
+    </style>
+    <script>
+        // JavaScript function to toggle responsive menu
+        function toggleMenu() {
+            console.log("toggle menu");
+            var menuList = document.getElementById("menuList");
+            menuList.classList.toggle("responsive");
+            var sidebar = document.getElementById("sidebar");
+            if (menuList.classList.contains("responsive")) {
+                sidebar.style.transform = "translateX(0)";
+            } else {
+                sidebar.style.transform = "translateX(200px)";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu" id="menuList">
+        <a href="index.html"><button>Home</button></a>
+        <div class="dropdown">
+            <a href="about.html"><button class="dropdown-btn">About</button></a>
+            <div class="dropdown-content">
+              <a href="projects.html">Projects</a>
+              <a href="videos.html">YouTube videos</a>
+            </div>
+          </div>
+        <a href="#"><button>Blog</button></a>
+        <a href="#"><button>Contact</button></a>
+
+        <div class="icon" onclick="toggleMenu();">&#9776;</div>
+    </div>
+
+    <!-- Sidebar Menu (Mobile) -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="videos.html">YouTube videos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Introduction Section -->
+    <div class="introduction">
+        <h1>YouTube videos</h1>
+        <p>
+            I like to document my progress on things, as well as interesting events through videos. I have plenty of experience 
+            making <a href="https://www.youtube.com/@YUFAus">gaming edits</a>, but with that in the past, I use my editing skills for trains & documentation purposes.
+        </p>
+    </div>
+
+    <div class="videoContainer">
+        <h2>Wondabyne train edit</h2>
+        <div class="videoEmbed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hh3H035JrGY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© Te-Jen Yu, 2023</p>
+        <ul class="horizontal-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
