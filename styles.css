@@ -150,8 +150,14 @@ ul.horizontal-list li {
 .footer a:visited {
     color: inherit;
 }
+a:visited {
+    color: inherit;
+}
 
 .footer a:link {
+    color: var(--paragraph-color);
+}
+a:link {
     color: var(--paragraph-color);
 }
 .container {
