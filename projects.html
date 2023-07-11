@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <title>Te-Jen Yu | Home</title>
+    <title>Te-Jen Yu | Projects</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bahnschrift">
     <style>
 
@@ -96,11 +96,11 @@
 
     <div class="altContainers">
         <div class = "altContainers1">
-            <h2>Zero-software, PWM controlled, focused-illumination-area linkage lamp</h2>
+            <h2>PWM controlled LED, focused-area-of-illumination parallel linkage lamp</h2>
             <h3>Idea</h3>
-            <p>The aim of this project is to create a desk lamp that uses a conventional lamp linkage, customized
-                to my specifications of always pointing in the same direction regardless of its configured height.
-                I plan to achieve this through a modified parallel linkage.
+            <p>The aim of this project is to create a desk lamp that uses a parallel linkage. The user should be able to control 
+                it by specifying two parameters - the angle of illumination and the x-distance from the base of the lamp. The microcontroller 
+                should then use inverse kinematics to determine the angles of the two stepper motors which control the arms of the lamp.
             </p>
             <p>
                 The lamp will light up my projects workbench through strong lamp-quality LEDs that are going to be driven by a
@@ -114,7 +114,8 @@
                     adjusted to the current lighting conditions via a photodiode that varies the duty cycle of the PWM circuit.
                 </li>
                 <li>
-                    The user can operate a two way switch to power a stepper motor, which drives gears to raise or lower the lamp linkage. 
+                    The user can operate two rotary encoders which send parameters to the microcontroller, 
+                    which then drives the stepper motors through inverse kinematics calculations. 
                     The movement will be constrained by limit switches that prevent the lamp from breaking due to collisions.
                 </li>
             </ul>
